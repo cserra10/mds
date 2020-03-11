@@ -1,0 +1,27 @@
+{
+  "name": "@mds/themes",
+  "version": "0.0.1",
+  "description": "Create your own themes",
+  "author": "Cesar <cesr90@gmail.com>",
+  "homepage": "https://github.com/cserra10/mds#readme",
+  "license": "MIT",
+  "main": "build/index.js",
+  "module": "build/index.es.js",
+  "files": [
+    "build"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cserra10/mds.git"
+  },
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "devDependencies": {
+    "rollup": "^2.0.2",
+    "rollup-plugin-node-resolve": "^5.2.0"
+  }
+}

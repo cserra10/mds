@@ -1,0 +1,10 @@
+.idea
+.vscode
+*.log
+yarn-debug.log*
+yarn-error.log*
+coverage
+node_modules
+dist
+build
+.DS_Store
