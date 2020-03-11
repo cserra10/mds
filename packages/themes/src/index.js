@@ -1,5 +1,5 @@
-import light from './light'
-import dark from './dark'
+import light from './bestday'
+import dark from './bestday-dark'
 
 export default {
   light,

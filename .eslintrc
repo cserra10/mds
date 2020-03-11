@@ -10,6 +10,7 @@
     "@typescript-eslint/semi": ["error", "never"],
     "react/jsx-props-no-spreading": "off",
     "arrow-parens": ["error", "as-needed"],
-    "consistent-return": "off"
+    "consistent-return": "off",
+    "react/jsx-filename-extension": "off"
   }
 }
