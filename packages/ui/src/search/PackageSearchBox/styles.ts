@@ -34,7 +34,8 @@ export default (theme: Theme) => {
     },
 
     header: {
-      boxShadow: theme.shadows[0]
+      boxShadow: theme.shadows[0],
+      color: theme.palette.text.primary
     },
 
     main: {
@@ -78,13 +79,15 @@ export default (theme: Theme) => {
 
     submit: {
       border: `1px solid ${theme.palette.divider}`,
-      padding: theme.spacing(1),
-      color: theme.palette.text.primary,
-      margin: theme.spacing(2)
+      padding: theme.spacing(2),
+      color: theme.palette.primary.contrastText,
+      margin: theme.spacing(2),
+      backgroundColor: theme.palette.primary.main,
+      borderRadius: theme.shape.borderRadius
     }
   }) as StylesAPI
 
   // @ts-ignore
-  const themeStyles = theme.styles?.['search/PackageSearchBox']
+  const themeStyles = theme.styles ? theme.styles['search/PackageSearchBox'] : {}
   return combineStyles(styles, themeStyles)(theme)
 }

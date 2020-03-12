@@ -35,6 +35,6 @@ export default (theme: Theme) => {
 
 
   // @ts-ignore
-  const themeStyles = theme.styles?.['common/Stepper']
+  const themeStyles = theme.styles ? theme.styles['common/Stepper'] : {}
   return combineStyles(styles, themeStyles)(theme)
 }

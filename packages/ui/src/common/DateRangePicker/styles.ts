@@ -108,6 +108,6 @@ export default (theme: Theme) => {
   })
 
   // @ts-ignore
-  const themeStyles = theme.styles?.['common/DateRangePicker']
+  const themeStyles = theme.styles ? theme.styles['common/DateRangePicker'] : {}
   return combineStyles(styles, themeStyles)(theme)
 }

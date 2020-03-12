@@ -1,17 +1,20 @@
 import React, { useEffect } from 'react'
+import clsx from 'clsx'
 import Tab from '@material-ui/core/Tab'
 import Tabs from '@material-ui/core/Tabs'
 import Apartment from '@material-ui/icons/Apartment'
 import Flight from '@material-ui/icons/Flight'
-
-import { withStyles, Theme } from '@material-ui/core/styles'
+import { withStyles } from '@material-ui/core/styles'
+import { Props } from './types'
+import styles from './styles'
 
 const TabServices = (
   {
+    className: classNameProp,
     classes,
     onChange,
     value: initialValue
-  }
+  } : Props
 ) => {
   const [value, setValue] = React.useState(initialValue)
 
@@ -23,8 +26,12 @@ const TabServices = (
     onChange(value)
   }, [value])
 
+  const className = clsx(classNameProp, classes.root)
+  const tabClasses = { root: classes.tab, selected: classes.selectedTab }
+
   return (
     <Tabs
+      className={className}
       textColor="primary"
       indicatorColor="secondary"
       value={value}
@@ -32,19 +39,22 @@ const TabServices = (
       aria-label="simple tabs example"
     >
       <Tab
+        classes={tabClasses}
         label="Hotels"
-        icon={<Apartment className={classes.hotelIcon} />}
+        icon={<Apartment className={classes.tabIcon} />}
         value="hotels"
       />
       <Tab
+        classes={tabClasses}
         label="Flights"
-        icon={<Flight className={classes.flightIcon} />}
+        icon={<Flight className={classes.tabIcon} />}
         value="flights"
       />
       <Tab
+        classes={tabClasses}
         label="Packages"
         icon={(
-          <div className={classes.packageIcon}>
+          <div className={`${classes.tabIcon} ${classes.tabIconPackage}`}>
             <Apartment />
             <Flight />
           </div>
@@ -54,15 +64,5 @@ const TabServices = (
     </Tabs>
   )
 }
-
-const styles = (theme: Theme) => ({
-  root: {
-
-  },
-
-  packageIcon: {
-    display: 'flex'
-  }
-})
 
 export default withStyles(styles)(TabServices)

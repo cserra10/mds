@@ -8,6 +8,7 @@ export { default as PackageSearchBox } from './search/PackageSearchBox'
 export { default as HotelSearchBox } from './search/HotelSearchBox'
 export { default as FlightSearchBox } from './search/FlightSearchBox'
 
+export { default as Header } from './common/Header'
 export { default as TabServices } from './common/TabServices'
 
 export { default as ThemedApp } from './common/ThemedApp'

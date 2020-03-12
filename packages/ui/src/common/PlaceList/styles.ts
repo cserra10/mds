@@ -34,6 +34,6 @@ export default (theme: Theme) => {
   }) as StylesAPI
 
   // @ts-ignore
-  const themeStyles = theme.styles?.['common/PlaceList']
+  const themeStyles = theme.styles ? theme.styles['common/PlaceList'] : {}
   return combineStyles(styles, themeStyles)(theme)
 }

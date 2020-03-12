@@ -6,7 +6,7 @@ import {
   boolean
 } from '@storybook/addon-knobs'
 import { PlaceInput } from '@keldor/ui'
-import fetchPlaces from '../mocks/fetchPlaces'
+import fetchPlaces from '../../mocks/fetchPlaces'
 
 export default {
   component: PlaceInput,

@@ -30,6 +30,6 @@ export default (theme: Theme) => {
   }) as StylesAPI
 
   // @ts-ignore
-  const themeStyles = theme.styles?.['common/DialogRoomsInput']
+  const themeStyles = theme.styles ? theme.styles['common/DialogRoomsInput'] : {}
   return combineStyles(styles, themeStyles)(theme)
 }

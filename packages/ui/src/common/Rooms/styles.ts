@@ -62,6 +62,6 @@ export default (theme: Theme) => {
   }) as StylesAPI
 
   // @ts-ignore
-  const themeStyles = theme.styles?.['common/Rooms']
+  const themeStyles = theme.styles ? theme.styles['common/Rooms'] : {}
   return combineStyles(styles, themeStyles)(theme)
 }

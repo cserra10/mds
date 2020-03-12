@@ -1,6 +1,10 @@
 import React, { useState } from 'react'
 import {
-  HotelSearchBox, PackageSearchBox, FlightSearchBox, TabServices
+  Header,
+  HotelSearchBox,
+  PackageSearchBox,
+  FlightSearchBox,
+  TabServices
 } from '@keldor/ui'
 import fetchPlaces from '../fetchPlaces'
 
@@ -9,12 +13,12 @@ const Home = () => {
 
   return (
     <div>
+      <Header title="BestDay" />
+
       <TabServices
         value={currentProduct}
         onChange={setCurrentProduct}
       />
-
-      <br />
 
       { currentProduct === 'hotels' && (
         <HotelSearchBox

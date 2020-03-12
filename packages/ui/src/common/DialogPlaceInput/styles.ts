@@ -38,6 +38,6 @@ export default (theme: Theme) => {
   })
 
   // @ts-ignore
-  const themeStyles = theme.styles?.['common/DialogPlaceList']
+  const themeStyles = theme.styles ? theme.styles['common/DialogPlaceList'] : {}
   return combineStyles(styles, themeStyles)(theme)
 }

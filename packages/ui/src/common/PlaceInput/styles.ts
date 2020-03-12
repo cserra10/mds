@@ -33,6 +33,6 @@ export default (theme: Theme) => {
   }) as StylesAPI
 
   // @ts-ignore
-  const themeStyles = theme.styles?.['common/PlaceInput']
+  const themeStyles = theme.styles ? theme.styles['common/PlaceInput'] : {}
   return combineStyles(styles, themeStyles)(theme)
 }
