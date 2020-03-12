@@ -1,9 +1,10 @@
 {
-  "name": "mds",
+  "name": "keldor",
   "private": true,
   "license": "MIT",
   "workspaces": [
-    "packages/*"
+    "packages/*",
+    "packages/web/mobile/home"
   ],
   "scripts": {
     "clean": "lerna clean"

@@ -1,4 +1,4 @@
-# `@mds/themes`
+# `@keldor/themes`
 
 > Collection of themes
 

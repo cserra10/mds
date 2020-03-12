@@ -13,7 +13,7 @@ export type StylesAPI = {
 }
 
 export default (theme: Theme) => {
-  const defaultStyles = createStyles({
+  const styles = createStyles({
     root: {
       display: 'flex',
       flexDirection: 'column'
@@ -33,5 +33,6 @@ export default (theme: Theme) => {
   }) as StylesAPI
 
   // @ts-ignore
-  return combineStyles(defaultStyles, theme.styles['common/PlaceInput'] || {})(theme)
+  const themeStyles = theme.styles?.['common/PlaceInput']
+  return combineStyles(styles, themeStyles)(theme)
 }

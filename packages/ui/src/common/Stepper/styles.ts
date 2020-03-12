@@ -10,7 +10,7 @@ export type StylesAPI = {
 }
 
 export default (theme: Theme) => {
-  const defaultStyles = createStyles({
+  const styles = createStyles({
     root: {
       width: 150,
       display: 'flex',
@@ -35,5 +35,6 @@ export default (theme: Theme) => {
 
 
   // @ts-ignore
-  return combineStyles(defaultStyles, theme.styles['common/Stepper'])(theme)
+  const themeStyles = theme.styles?.['common/Stepper']
+  return combineStyles(styles, themeStyles)(theme)
 }

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Stepper } from '@mds/ui'
+import { Stepper } from '@keldor/ui'
 
 export default { title: 'common/Stepper' }
 

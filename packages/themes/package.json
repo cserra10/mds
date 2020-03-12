@@ -1,9 +1,9 @@
 {
-  "name": "@mds/themes",
+  "name": "@keldor/themes",
   "version": "0.0.1",
   "description": "Create your own themes",
   "author": "Cesar <cesr90@gmail.com>",
-  "homepage": "https://github.com/cserra10/mds#readme",
+  "homepage": "https://github.com/cserra10/keldor#readme",
   "license": "MIT",
   "main": "build/index.js",
   "module": "build/index.es.js",
@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cserra10/mds.git"
+    "url": "git+https://github.com/cserra10/keldor.git"
   },
   "scripts": {
     "build": "rollup -c"

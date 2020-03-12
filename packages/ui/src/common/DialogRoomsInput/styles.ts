@@ -9,7 +9,7 @@ export type StylesAPI = {
 }
 
 export default (theme: Theme) => {
-  const defaultStyles = createStyles({
+  const styles = createStyles({
     label: {
       color: theme.palette.text.primary,
       marginBottom: theme.spacing(1)
@@ -30,5 +30,6 @@ export default (theme: Theme) => {
   }) as StylesAPI
 
   // @ts-ignore
-  return combineStyles(defaultStyles, theme.styles['common/DialogRoomsInput'])(theme)
+  const themeStyles = theme.styles?.['common/DialogRoomsInput']
+  return combineStyles(styles, themeStyles)(theme)
 }

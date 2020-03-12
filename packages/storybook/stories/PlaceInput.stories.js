@@ -5,7 +5,7 @@ import {
   text,
   boolean
 } from '@storybook/addon-knobs'
-import { PlaceInput } from '@mds/ui'
+import { PlaceInput } from '@keldor/ui'
 import fetchPlaces from '../mocks/fetchPlaces'
 
 export default {

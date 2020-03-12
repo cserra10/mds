@@ -12,7 +12,7 @@ export type StylesAPI = {
 }
 
 export default (theme: Theme) => {
-  const defaultStyles = createStyles({
+  const styles = createStyles({
     placeHeader: {
       backgroundColor: theme.palette.primary.light,
       color: theme.palette.primary.contrastText,
@@ -34,5 +34,6 @@ export default (theme: Theme) => {
   }) as StylesAPI
 
   // @ts-ignore
-  return combineStyles(defaultStyles, theme.styles['common/PlaceList'])(theme)
+  const themeStyles = theme.styles?.['common/PlaceList']
+  return combineStyles(styles, themeStyles)(theme)
 }

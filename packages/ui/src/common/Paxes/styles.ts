@@ -99,5 +99,6 @@ export default (theme: Theme) => {
   }) as StylesAPI
 
   // @ts-ignore
-  return combineStyles(styles, theme.styles['common/Paxes'])(theme)
+  const themeStyles = theme.styles?.['common/Paxes']
+  return combineStyles(styles, themeStyles)(theme)
 }

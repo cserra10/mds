@@ -85,5 +85,6 @@ export default (theme: Theme) => {
   }) as StylesAPI
 
   // @ts-ignore
-  return combineStyles(styles, theme.styles['search/PackageSearchBox'])(theme)
+  const themeStyles = theme.styles?.['search/PackageSearchBox']
+  return combineStyles(styles, themeStyles)(theme)
 }

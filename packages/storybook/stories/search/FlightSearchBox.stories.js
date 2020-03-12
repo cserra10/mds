@@ -2,12 +2,12 @@ import React from 'react'
 import { action } from '@storybook/addon-actions'
 import { MuiPickersUtilsProvider } from '@material-ui/pickers'
 import DateFnsUtils from '@date-io/date-fns'
-import { PackageSearchBox } from '@keldor/ui'
+import { FlightSearchBox } from '@keldor/ui'
 import fetchPlaces from '../../mocks/fetchPlaces'
 
 export default {
-  component: PackageSearchBox,
-  title: 'searchBox/Flight + Hotel',
+  component: FlightSearchBox,
+  title: 'searchBox/Flight',
   decorators: [
     storyFn => (
       <MuiPickersUtilsProvider utils={DateFnsUtils}>{storyFn()}</MuiPickersUtilsProvider>
@@ -17,7 +17,7 @@ export default {
 
 export const Default = () => {
   return (
-    <PackageSearchBox
+    <FlightSearchBox
       fetchPlaces={fetchPlaces}
       onChange={action('onChange')}
       onSubmit={action('onSubmit')}

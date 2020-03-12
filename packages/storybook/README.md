@@ -1,6 +1,6 @@
 # `storybook`
 
-> Storybook instance consuming @mds/library and @mds/themes
+> Storybook instance consuming @keldor/library and @keldor/themes
 
 ## Run storybook
 `$ yarn storybook`

@@ -11,9 +11,9 @@ export default ({ story, children, themes }) => {
     return (<>{story ? story() : children}</>)
   }
 
-  const savedTheme = localStorage.getItem('mds-theme')
+  const savedTheme = localStorage.getItem('keldor-theme')
   const defaultThemeId = themes[savedTheme] ? savedTheme : themesArr[0]
-  localStorage.setItem('mds-theme', defaultThemeId)
+  localStorage.setItem('keldor-theme', defaultThemeId)
   const [currentThemeId, setCurrentThemeId] = React.useState(defaultThemeId)
 
   React.useEffect(() => {

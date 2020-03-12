@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { withKnobs } from '@storybook/addon-knobs'
 import { action } from '@storybook/addon-actions'
-import { DialogPaxesInput } from '@mds/ui'
+import { DialogPaxesInput } from '@keldor/ui'
 
 export default {
   component: DialogPaxesInput,

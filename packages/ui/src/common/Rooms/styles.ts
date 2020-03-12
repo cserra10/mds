@@ -17,7 +17,7 @@ export type StylesAPI = {
 }
 
 export default (theme: Theme) => {
-  const defaultStyles = createStyles({
+  const styles = createStyles({
     root: {
       padding: theme.spacing(1),
       display: 'flex',
@@ -62,5 +62,6 @@ export default (theme: Theme) => {
   }) as StylesAPI
 
   // @ts-ignore
-  return combineStyles(defaultStyles, theme.styles['common/Rooms'])(theme)
+  const themeStyles = theme.styles?.['common/Rooms']
+  return combineStyles(styles, themeStyles)(theme)
 }

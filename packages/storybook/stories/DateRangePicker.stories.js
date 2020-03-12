@@ -2,7 +2,7 @@ import React from 'react'
 import DateFnsUtils from '@date-io/date-fns'
 import { MuiPickersUtilsProvider } from '@material-ui/pickers'
 import { action } from '@storybook/addon-actions'
-import { DateRangePicker } from '@mds/ui'
+import { DateRangePicker } from '@keldor/ui'
 
 export default {
   component: DateRangePicker,

@@ -39,7 +39,7 @@ const BaseComponent = ({
 }
 
 export default ({ channel, active }) => {
-  const [theme, setTheme] = React.useState(localStorage.getItem('mds-theme'))
+  const [theme, setTheme] = React.useState(localStorage.getItem('keldor-theme'))
   const [themes, setThemes] = React.useState({})
 
   useEffect(() => {
@@ -60,7 +60,7 @@ export default ({ channel, active }) => {
 
   const onSelectTheme = themeId => {
     setTheme(themeId)
-    localStorage.setItem('mds-theme', themeId)
+    localStorage.setItem('keldor-theme', themeId)
     channel.emit('themeSelected', themeId)
   }
 

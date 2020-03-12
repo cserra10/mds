@@ -4,8 +4,8 @@ import * as React from 'react'
 import { addons, types } from '@storybook/addons'
 import Themes from './Themes'
 
-addons.register('storybook/mds-themes', api => {
-  addons.add('storybook/mds-themes/panel', {
+addons.register('storybook/keldor-themes', api => {
+  addons.add('storybook/keldor-themes/panel', {
     type: types.PANEL,
     match: ({ viewMode }) => viewMode === 'story',
     render: ({ active, key }) => (

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { withKnobs } from '@storybook/addon-knobs'
 import { action } from '@storybook/addon-actions'
-import { DialogPlaceInput } from '@mds/ui'
+import { DialogPlaceInput } from '@keldor/ui'
 import fetchPlaces from '../mocks/fetchPlaces'
 
 export default {

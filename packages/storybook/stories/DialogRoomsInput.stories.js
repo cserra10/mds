@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { withKnobs } from '@storybook/addon-knobs'
 import { action } from '@storybook/addon-actions'
-import { DialogRoomsInput } from '@mds/ui'
+import { DialogRoomsInput } from '@keldor/ui'
 
 export default {
   component: DialogRoomsInput,

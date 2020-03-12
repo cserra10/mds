@@ -1,13 +1,13 @@
-# `@mds/library`
+# `@keldor/library`
 
 > React UI Library
 
 ## Install
-`$ yarn add @mds/ui`
+`$ yarn add @keldor/ui`
 
 ## Usage
 ```
-import { Hello } from @mds/ui
+import { Hello } from @keldor/ui
 
 const App = () => (
     <Hello />

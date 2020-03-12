@@ -6,6 +6,11 @@ export type StylesAPI = {
   root: CSSProperties
   header: CSSProperties
   main: CSSProperties
+  originDestination: CSSProperties
+  toggleOriginDestination: CSSProperties
+  origin: CSSProperties
+  originLabel: CSSProperties
+  originInput: CSSProperties
   destination: CSSProperties
   destinationLabel: CSSProperties
   destinationInput: CSSProperties
@@ -36,6 +41,23 @@ export default (theme: Theme) => {
       padding: theme.spacing(2)
     },
 
+    originDestination: {
+      display: 'flex',
+      flexDirection: 'column'
+    },
+
+    origin: {
+      marginBottom: theme.spacing(2),
+      display: 'flex',
+      flexDirection: 'column'
+    },
+
+    toggleOriginDestination: {
+      marginBottom: theme.spacing(2),
+      alignSelf: 'center',
+      display: 'none'
+    },
+
     destination: {
       marginBottom: theme.spacing(2),
       display: 'flex',
@@ -63,6 +85,6 @@ export default (theme: Theme) => {
   }) as StylesAPI
 
   // @ts-ignore
-  const themeStyles = theme.styles?.['search/HotelSearchBox']
+  const themeStyles = theme.styles?.['search/FlightSearchBox']
   return combineStyles(styles, themeStyles)(theme)
 }
